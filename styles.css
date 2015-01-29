@@ -216,11 +216,11 @@ nav#mainnav li.selected-item  {
 nav#mainnav li.selected-item a {
         color:#fff;
         font-weight:bold;
-        background: #D20000;
+        background: rgb(5,5,255);
 }
 
 nav#mainnav li.selected-item a:hover {
-	color: #D28000;
+	color: rgb(2,7,255);
 	font-weight:bold;
 	background: #fff;
 }
