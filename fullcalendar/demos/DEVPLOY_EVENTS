@@ -1,0 +1,25 @@
+                {
+                    title: 'SAMPLE',
+                    start: '1970-01-01',
+                    end: '1970-01-01'
+                }
+                ,{
+                    title: 'Club Planning Session 8PM on Slack',
+                    start: '2015-09-14',
+                    end: '2015-09-14'
+                }
+                ,{
+                    title: "Ethan's Birthday!",
+                    start: '2015-09-17',
+                    end: '2015-09-17'
+                }
+                ,{
+                    title: 'EasyCTF 2015',
+                    start: '2015-10-03',
+                    end: '2015-10-10'
+                }
+                ,{
+                    title: 'Interest Meeting',
+                    start: '2015-09-30',
+                    end: '2015-09-30'
+                }
