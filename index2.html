@@ -126,11 +126,20 @@
 		<div class="row center-block">
 			<div class="col-md-2 col-sm-3"> </div>
 			<div class="col-md-3 col-sm-6">
-				<input  type="text" class="dial" data-min="1" data-max="12" data-readOnly="true" id="clock_hours">
+				<input type="text" class="dial" data-min="1" data-max="12" data-readOnly="true" id="clock_hours">
 				<script>
-					$(function() {
-						$(".dial").knob();
-					});
+					$(".s").knob({
+						'min': 0,
+						'max': 60,
+						'readOnly': true,
+						'width': 120,
+						'height': 120,
+						'fgColor': 'blue',
+						'dynamicDraw': true,
+						'thickness': 0.2,
+						'tickColorizeValues': true,
+						'skin': 'tron'
+					})
 				</script>
 			</div>
 			<div class="col-md-3 col-sm-6">
