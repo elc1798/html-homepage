@@ -2,28 +2,28 @@
 <html>
 
 <head>
-	<meta charset='utf-8' />
-	<link rel='stylesheet' href='../dark-hive/jquery-ui.min.css' />
-	<link href='../fullcalendar.css' rel='stylesheet' />
-	<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
-	<script src='../lib/moment.min.js'></script>
-	<script src='../lib/jquery.min.js'></script>
-	<script src='../fullcalendar.min.js'></script>
-	<script src='../gcal.js'></script>
-	<script>
-		$(document).ready(function() {
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='../dark-hive/jquery-ui.min.css' />
+    <link href='../fullcalendar.css' rel='stylesheet' />
+    <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../lib/moment.min.js'></script>
+    <script src='../lib/jquery.min.js'></script>
+    <script src='../fullcalendar.min.js'></script>
+    <script src='../gcal.js'></script>
+    <script>
+        $(document).ready(function() {
 
-			var date = new Date();
-			var d = date.getDate();
-			var m = date.getMonth();
-			var y = date.getFullYear();
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
-			$('#calendar').fullCalendar({
-				theme: true,
-				defaultDate: date,
-				editable: false,
-				eventLimit: true, // allow "more" link when too many events
-				events: [
+            $('#calendar').fullCalendar({
+                theme: true,
+                defaultDate: date,
+                editable: false,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
                 {
                     title: 'SAMPLE',
                     start: '1970-01-01',
