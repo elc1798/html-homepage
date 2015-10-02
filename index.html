@@ -39,7 +39,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
@@ -125,6 +124,28 @@
                             myDelay()
                         }, 1000);
 
+                        var invert = 0;
+
+                        function invertColors() {
+                            var css = 'html {-webkit-filter: invert(100%);' + '-moz-filter: invert(100%);' + '-o-filter: invert(100%);' + '-ms-filter: invert(100%); }';
+                            var head = document.getElementsByTagName('head')[0];
+                            var style = document.createElement('style');
+                            if (!window.counter) {
+                                window.counter = 1;
+                            } else {
+                                window.counter++;
+                                if (window.counter % 2 == 0) {
+                                    var css = 'html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
+                                }
+                            }
+                            style.type = 'text/css';
+                            if (style.styleSheet) {
+                                style.styleSheet.cssText = css;
+                            } else {
+                                style.appendChild(document.createTextNode(css));
+                            }
+                            head.appendChild(style);
+                        }
 
                         function myDelay() {
                             var d = new Date(),
@@ -133,6 +154,15 @@
                                 h = d.getHours();
                             if (h > 12) {
                                 h = h - 12;
+                                if (invert == 0) {
+                                    invertColors();
+                                    invert = 1;
+                                }
+                            } else {
+                                if (invert == 1) {
+                                    invertColors();
+                                    invert = 0;
+                                }
                             }
                             $('.h').val(h).trigger("change");
                             $('.m').val(m).trigger("change");
