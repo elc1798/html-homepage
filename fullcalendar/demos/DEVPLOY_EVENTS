@@ -53,3 +53,13 @@
                     start: '2015-10-06',
                     end: '2015-10-06'
                 }
+                ,{
+                    title: 'Physics Test',
+                    start: '2015-10-06',
+                    end: '2015-10-06'
+                }
+                ,{
+                    title: 'Multi Test',
+                    start: '2015-10-08',
+                    end: '2015-10-08'
+                }
