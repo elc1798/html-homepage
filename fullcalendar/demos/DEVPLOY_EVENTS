@@ -23,3 +23,13 @@
                     start: '2015-09-30',
                     end: '2015-09-30'
                 }
+                ,{
+                    title: 'College Meeting Per 3',
+                    start: '2015-10-05',
+                    end: '2015-10-05'
+                }
+                ,{
+                    title: 'Early Apps Due',
+                    start: '2015-11-01',
+                    end: '2015-11-01'
+                }
