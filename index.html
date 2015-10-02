@@ -1,72 +1,152 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<title>StuyFyre Gateway</title>
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>StuyFyreCS Gateway</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="knob/js/jquery.knob.js"></script>
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body onload="startTime()">
+<body>
 
-	<section id="body" class="width">
-		<aside id="sidebar" class="column-left">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">StuyFyreCS Gateway</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-			<header>
-				<h1><a>StuyFyreCS Gateway</a></h1>
-				<h2>------------------------</h2>
-				<h2 id="date"></h2>
-				<h2>-----------</h2>
-				<h2 id="time"></h2>
-			</header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li><a href="http://elc1798.github.io">elc1798.github.io</a></li>
+                    <li><a href="http://whitehatacademy.club">whiteHatAcademy</a></li>
+                    <li><a href="http://www.gmail.com">Gmail</a></li>
+                    <li><a href="http://www.github.com">Github</a></li>
+                    <li><a href="http://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.youtube.com">YouTube</a></li>
+                    <li><a href="http://stuypulse.slack.com">Stuypulse Slack</a></li>
+                    <li><a href="http://trello.com">Trello</a></li>
+                    <li><a href="http://wikipedia.com">Wikipedia</a></li>
+                    <li><a href="http://wolframalpha.com">WolframAlpha</a></li>
+                    <li><a href="http://usaco.org">USACO</a></li>
+                    <li><a href="http://loren.blaming.me/~whitehats">whiteHatAcademy [Alternate Link]</a></li>
+                    <li><a href="http://stuypulse.com">StuyPulse</a></li>
+                    <li><a href="http://www.mathwithmrsa.net">Avigdor Homepage</a></li>
+                    <li><a href="http://www.freewebs.com/boerickesworld/economics.htm">Boericke's Website</a></li>
+                    <li><a href="http://stuycs-apcs-z.github.io">APCS Zamansky Class Page</a></li>
+                    <li><a href="http://www.stuycs.org/courses/mks65/dw">Systems DW</a></li>
+                    <li><a href="http://stuy.edu">Stuy.edu</a></li>
+                    <li><a href="http://stuy.enschool.com">stuy.enschool.com</a></li>
+                    <li><a href="http://zetcode.com">ZetCode</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-offset-3 col-md-offset-2 text-center main">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <input type="text" class="h" value="0">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <input type="text" class="m" value="0">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <input type="text" class="s" value="0">
+                    </div>
+                </div>
 
-			<script>
-				var d = new Date();
-				document.getElementById("date").innerHTML = d.toDateString();
-			</script>
+                <script>
+                    $(document).ready(function() {
+                        //$('.h, .m ,.s').val(0).trigger('change').delay(10);
+                        $(".s").knob({
+                            'min': 0,
+                            'max': 60,
+                            'readOnly': true,
+                            'width': 120,
+                            'height': 120,
+                            'fgColor': '#3366FF',
+                            'dynamicDraw': true,
+                            'thickness': 0.3,
+                            'tickColorizeValues': true
+                        })
+                        $(".m").knob({
+                            'min': 0,
+                            'max': 60,
+                            'readOnly': true,
+                            'width': 120,
+                            'height': 120,
+                            'fgColor': '#9933FF',
+                            'dynamicDraw': true,
+                            'thickness': 0.4,
+                            'tickColorizeValues': true
+                        })
+                        $(".h").knob({
+                            'min': 0,
+                            'max': 12,
+                            'readOnly': true,
+                            'width': 120,
+                            'height': 120,
+                            'fgColor': '#33CCFF',
+                            'dynamicDraw': true,
+                            'thickness': 0.6,
+                            'tickColorizeValues': true
+                        })
 
-			<script>
-				function startTime() {
-					var today = new Date();
-					var h = today.getHours();
-					var m = today.getMinutes();
-					var s = today.getSeconds();
-					m = checkTime(m);
-					s = checkTime(s);
-					document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-					var t = setTimeout(function() {
-						startTime()
-					}, 500);
-				}
+                        myDelay();
 
-				function checkTime(i) {
-					if (i < 10) {
-						i = "0" + i
-					};
-					return i;
-				}
-			</script>
+                        var tmr = self.setInterval(function() {
+                            myDelay()
+                        }, 1000);
 
-			<nav id="mainnav">
-				<ul>
-					<li class="selected-item"><a href="#">Links</a></li>
-					<li><a href="http://elc1798.github.io">elc1798.github.io</a></li>
-					<li><a href="http://whitehatacademy.club">whiteHatAcademy</a></li>
-					<li><a href="http://www.gmail.com">Gmail</a></li>
-					<li><a href="http://www.github.com">Github</a></li>
-					<li><a href="http://www.facebook.com">Facebook</a></li>
-					<li><a href="http://www.youtube.com">YouTube</a></li>
-					<li><a href="http://stuypulse.slack.com">Stuypulse Slack</a></li>
-					<li class="selected-item"><a href="more.html">More</a></li>
-				</ul>
-			</nav>
 
-		</aside>
+                        function myDelay() {
+                            var d = new Date(),
+                                s = d.getSeconds(),
+                                m = d.getMinutes(),
+                                h = d.getHours();
+                            if (h > 12) {
+                                h = h - 12;
+                            }
+                            $('.h').val(h).trigger("change");
+                            $('.m').val(m).trigger("change");
+                            $('.s').val(s).trigger("change");
+                        }
+                    });
+                </script>
 
+                <div id="calendar" class="container-fluid">
+                    <object data='fullcalendar/demos/theme.html' style='width:100%;min-height:800px;'>
+                        <embed src='fullcalendar/demos/theme.html' style='width:100%;min-height:800px;' />
+                    </object>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
