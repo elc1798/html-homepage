@@ -33,3 +33,13 @@
                     start: '2015-11-01',
                     end: '2015-11-01'
                 }
+                ,{
+                    title: 'Complete CommonApp Essay',
+                    start: '2015-10-09',
+                    end: '2015-10-09'
+                }
+                ,{
+                    title: 'Complete MIT Essays',
+                    start: '2015-10-25',
+                    end: '2015-10-25'
+                }
