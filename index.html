@@ -152,8 +152,10 @@
                                 s = d.getSeconds(),
                                 m = d.getMinutes(),
                                 h = d.getHours();
-                            if (h > 12) {
-                                h = h - 12;
+                            if (12 <= h && h < 24) {
+                                if (h != 12) {
+                                    h = h - 12;
+                                }
                                 if (invert == 0) {
                                     invertColors();
                                     invert = 1;
