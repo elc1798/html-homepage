@@ -63,3 +63,13 @@
                     start: '2015-10-08',
                     end: '2015-10-08'
                 }
+                ,{
+                    title: 'Physics Test',
+                    start: '2015-10-07',
+                    end: '2015-10-07'
+                }
+                ,{
+                    title: 'Berkeley Repr',
+                    start: '2015-10-09',
+                    end: '2015-10-09'
+                }
