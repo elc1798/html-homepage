@@ -88,3 +88,8 @@
                     start: '2015-12-12',
                     end: '2015-12-12'
                 }
+                ,{
+                    title: 'College Decisions',
+                    start: '2015-12-11',
+                    end: '2015-12-11'
+                }
